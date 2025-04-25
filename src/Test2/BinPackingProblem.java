@@ -17,19 +17,27 @@ public class BinPackingProblem {
 			System.out.println(o.getOrderId() + " " + o.getVolume());
 		}
 		
-		// Put order volumes into double array
-		double[] volume = new double[orders.size()];
-		for (int i = 0; i < orders.size(); i++) {
-			volume[i] = orders.get(i).getVolume();
-		}
-		
 		// Run Best Fit algorithm
 		System.out.println("Number of bins required in Best Fit: "
-				+ BestFitAlgorithm.bestFit(volume, volume.length, BINCAPACITY));
+				+ BestFitAlgorithm.bestFit(orders, BINCAPACITY));
 		
 		// Run Next Fit algorithm
 		System.out.println("Number of bins required in Next Fit: "
-				+ NextFitAlgorithm.nextFit(volume, volume.length, BINCAPACITY));
+				+ NextFitAlgorithm.nextFit(orders, BINCAPACITY));
+		
+//		// Put order volumes into double array
+//		double[] volume = new double[orders.size()];
+//		for (int i = 0; i < orders.size(); i++) {
+//			volume[i] = orders.get(i).getVolume();
+//		}
+//	
+//		// Run Best Fit algorithm
+//		System.out.println("Number of bins required in Best Fit: "
+//				+ BestFitAlgorithm.bestFit(volume, volume.length, BINCAPACITY));
+//		
+//		// Run Next Fit algorithm
+//		System.out.println("Number of bins required in Next Fit: "
+//				+ NextFitAlgorithm.nextFit(volume, volume.length, BINCAPACITY));
 	}
 
 }

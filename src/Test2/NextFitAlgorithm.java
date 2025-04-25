@@ -1,29 +1,29 @@
 package Test2;
 
+import java.util.List;
+
 public class NextFitAlgorithm {
 	// Returns number of bins required
-    // using next fit online algorithm
-	
-    static int nextFit(double weight[], int n, int c)
-    {
+	// using next fit 
+	// online algorithm
+	static int nextFit(List<Order> orders, int capacity) {
+		// Initialize result (Count of bins) and remaining
+		// capacity in current bin.
+		int res = 0;
+		double bin_rem = capacity;
 
-        // Initialize result (Count of bins) and remaining
-        // capacity in current bin.
-        int res = 0; 
-        double bin_rem = c;
-
-        // Place items one by one
-        for (int i = 0; i < n; i++) {
-            // If this item can't fit in current bin
-            if (weight[i] > bin_rem) {
-                res++; // Use a new bin
-                bin_rem = c - weight[i];
-            }
-            else
-                bin_rem -= weight[i];
-        }
-        return res;
-    }
+		// Place items one by one
+		for (Order order : orders) {
+			double volume = order.getVolume();
+			// If this item can't fit in current bin
+			if (volume > bin_rem) {
+				res++; // Use a new bin
+				bin_rem = capacity - volume;
+			} else
+				bin_rem -= volume;
+		}
+		return res;
+	}
 }
 
-// https://www.geeksforgeeks.org/bin-packing-problem-minimize-number-of-used-bins/
+// References: https://www.geeksforgeeks.org/bin-packing-problem-minimize-number-of-used-bins/
