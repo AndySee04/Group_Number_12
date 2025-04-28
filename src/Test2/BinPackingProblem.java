@@ -24,7 +24,8 @@ public class BinPackingProblem {
 		// Run Next Fit algorithm
 		System.out.println("Number of bins required in Next Fit: " + NextFitAlgorithm.nextFit(orders, BINCAPACITY));
 
-		// Increasing order
+		// Increasing order 
+		// testing github
 
 		// Decreasing order
 	}
