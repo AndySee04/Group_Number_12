@@ -3,7 +3,7 @@ package Test2;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-// hello world
+
 public class BinPackingProblem {
 
 	public static void main(String[] args) {
@@ -20,28 +20,11 @@ public class BinPackingProblem {
 
 		// Default order
 		// Run Best Fit algorithm
-		System.out.println("Number of bins required in Best Fit: " + BestFitAlgorithm.bestFit(orders, BINCAPACITY));
+		BestFitAlgorithm best = new BestFitAlgorithm(orders, BINCAPACITY);
+		System.out.println("Number of bins required in Best Fit: " + best.findNumberOfBin());
+//		System.out.println("Number of bins required in Best Fit: " + BestFitAlgorithm.bestFit(orders, BINCAPACITY));
 		// Run Next Fit algorithm
-		System.out.println("Number of bins required in Next Fit: " + NextFitAlgorithm.nextFit(orders, BINCAPACITY));
+//		System.out.println("Number of bins required in Next Fit: " + NextFitAlgorithm.nextFit(orders, BINCAPACITY));
 
-		System.out.println("hjiiii");
-		// Increasing order 
-		// testing github
-
-		// Decreasing order
 	}
 }
-
-//		// Put order volumes into double array
-//		double[] volume = new double[orders.size()];
-//		for (int i = 0; i < orders.size(); i++) {
-//			volume[i] = orders.get(i).getVolume();
-//		}
-//	
-//		// Run Best Fit algorithm
-//		System.out.println("Number of bins required in Best Fit: "
-//				+ BestFitAlgorithm.bestFit(volume, volume.length, BINCAPACITY));
-//		
-//		// Run Next Fit algorithm
-//		System.out.println("Number of bins required in Next Fit: "
-//				+ NextFitAlgorithm.nextFit(volume, volume.length, BINCAPACITY));

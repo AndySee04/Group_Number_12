@@ -6,7 +6,7 @@ public class NextFitAlgorithm {
 	// Returns number of bins required
 	// using next fit 
 	// online algorithm
-	static int nextFit(List<Order> orders, int capacity) {
+	static int findnumberOfBin(List<Order> orders, int capacity) {
 		// Initialize result (Count of bins) and remaining
 		// capacity in current bin.
 		int res = 0;

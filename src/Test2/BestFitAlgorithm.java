@@ -2,11 +2,20 @@ package Test2;
 
 import java.util.List;
 
-public class BestFitAlgorithm {
+public class BestFitAlgorithm extends Algorithm {
+	private List<Order> orders;
+	private int capacity;
+	
+	public BestFitAlgorithm(List<Order> orders, int capacity) {
+		this.orders = orders;
+		this.capacity = capacity;
+	}
+	
 	// Returns number of bins 
 	// required using best fit
 	// online algorithm
-	static int bestFit(List<Order> orders, int capacity) {
+	@Override
+	int findNumberOfBin() {
 		// Initialize result (Count of bins)
 		int res = 0;
 
