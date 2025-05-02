@@ -30,3 +30,5 @@ public class NextFitAlgorithm extends BinPackingAlgorithm {
         }
     }
 }
+
+// References: https://www.geeksforgeeks.org/bin-packing-problem-minimize-number-of-used-bins/

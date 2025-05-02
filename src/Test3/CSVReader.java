@@ -7,15 +7,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CSVReader {
-
-	/**
-	 * Loads orders from a CSV file
-	 * 
-	 * @param filename Path to the CSV file
-	 * @return List of Order objects
-	 * @throws FileNotFoundException    if the file cannot be found
-	 * @throws IllegalArgumentException if the file format is invalid
-	 */
 	public static List<Order> loadOrders(String filename) throws FileNotFoundException, IllegalArgumentException {
 		List<Order> orderList = new ArrayList<>();
 		File file = new File(filename);
