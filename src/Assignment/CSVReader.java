@@ -1,4 +1,4 @@
-package Test3;
+package Assignment;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,4 +1,4 @@
-package Test3;
+package Assignment;
 
 public class Order {
 	// Instances
